@@ -261,6 +261,47 @@ public class NoteSearch extends Activity implements SearchView.OnQueryTextListen
     }
 }
 ```
+添加一个完整的搜索布局文件
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/close_search_icon"
+            android:queryHint="搜索"
+            android:iconifiedByDefault="false"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/close_search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+        />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>
 
 ### 3.设置编辑界面背景色
 
