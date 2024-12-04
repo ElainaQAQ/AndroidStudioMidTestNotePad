@@ -522,9 +522,15 @@ private void exportNote() {
     }
 }
 ```
-在fest文件中要加入权限
+在fest文件中加入权限
+
+```java
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+
+
 
 
 
